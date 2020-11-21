@@ -1,0 +1,47 @@
+# Transformations of joint frames wrt base frame
+/shoulder_link (rotates about Z axis)
+- Translation: [0.000, 0.000, 0.089]
+- Rotation: in Quaternion [0.000, 0.000, 1.000, -0.000]
+            in RPY (radian) [0.000, 0.000, -3.142]
+            in RPY (degree) [0.000, 0.000, -180.000]
+
+/upper_arm_link (rotates about Y axis)
+- Translation: [0.000, -0.136, 0.089]
+- Rotation: in Quaternion [-0.707, -0.000, 0.707, -0.000]
+            in RPY (radian) [3.142, 1.571, 0.000]
+            in RPY (degree) [180.000, 90.000, 0.000]
+
+/forearm_link (rotates about Y axis)
+At time 1573773809.702
+- Translation: [-0.425, -0.016, 0.089]
+- Rotation: in Quaternion [-0.707, -0.000, 0.707, -0.000]
+            in RPY (radian) [3.142, 1.571, 0.000]
+            in RPY (degree) [180.000, 90.000, 0.000]
+
+/wrist_1_link (rotates about Y axis)
+At time 1573774199.202
+- Translation: [-0.817, -0.016, 0.089]
+- Rotation: in Quaternion [1.000, 0.000, -0.000, 0.000]
+            in RPY (radian) [3.142, 0.000, 0.000]
+            in RPY (degree) [180.000, 0.000, 0.000]
+
+/wrist_2_link (rotates about Z axis)
+At time 1573774227.002
+- Translation: [-0.817, -0.109, 0.089]
+- Rotation: in Quaternion [1.000, 0.000, -0.000, 0.000]
+            in RPY (radian) [3.142, 0.000, 0.000]
+            in RPY (degree) [180.000, 0.000, 0.000]
+
+/wrist_3_link (rotates about Y axis)
+At time 1573774251.802
+- Translation: [-0.817, -0.109, -0.005]
+- Rotation: in Quaternion [1.000, 0.000, -0.000, 0.000]
+            in RPY (radian) [3.142, 0.000, 0.000]
+            in RPY (degree) [180.000, 0.000, 0.000]
+
+/tool0 (to be used as gst0)
+At time 1573774768.902
+- Translation: [-0.817, -0.191, -0.005]
+- Rotation: in Quaternion [0.707, 0.000, -0.000, 0.707]
+            in RPY (radian) [1.571, 0.000, 0.000]
+            in RPY (degree) [90.000, 0.000, 0.000]
