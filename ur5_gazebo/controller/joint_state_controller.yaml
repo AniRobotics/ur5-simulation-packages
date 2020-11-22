@@ -1,0 +1,40 @@
+joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+
+# Specify the PID gain values (for error mitigation)
+#gazebo_ros_control/pid_gains:
+#    shoulder_pan_joint: {p: 1000.0, i: 0.01, d: 10.0}
+#    shoulder_lift_joint: {p: 1000.0, i: 0.01, d: 10.0}
+#    elbow_joint: {p: 1000.0, i: 0.01, d: 10.0}
+#    wrist_1_joint: {p: 1000.0, i: 0.01, d: 10.0}
+#    wrist_2_joint: {p: 1000.0, i: 0.01, d: 10.0}
+#    wrist_3_joint: {p: 1000.0, i: 0.01, d: 10.0}
+
+# Position Controllers ---------------------------------------
+joint1_position_controller:
+  type: position_controllers/JointPositionController
+  joint: shoulder_pan_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+joint2_position_controller:
+  type: position_controllers/JointPositionController
+  joint: shoulder_lift_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+joint3_position_controller:
+  type: position_controllers/JointPositionController
+  joint: elbow_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+joint4_position_controller:
+  type: position_controllers/JointPositionController
+  joint: wrist_1_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+joint5_position_controller:
+  type: position_controllers/JointPositionController
+  joint: wrist_2_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+joint6_position_controller:
+  type: position_controllers/JointPositionController
+  joint: wrist_3_joint
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+
