@@ -20,10 +20,13 @@
   <!-- push robot_description to factory and spawn robot in gazebo -->
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -z 0.1" respawn="false" output="screen" />
 
-  <include file="$(find ur5_gazebo)/launch/controller_utils.launch"/>
+  <!--<include file="$(find ur5_gazebo)/launch/controller_utils.launch"/>-->
 
   <!-- load other controllers -->
-  <node name="ros_control_controller_manager" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="load joint1_position_controller joint2_position_controller joint3_position_controller joint4_position_controller joint5_position_controller joint6_position_controller" />
+  <!--<node name="ros_control_controller_manager" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="load joint1_position_controller joint2_position_controller joint3_position_controller joint4_position_controller joint5_position_controller joint6_position_controller" />-->
+  <rosparam file="$(find ur5_gazebo)/controller/joint_state_controller.yaml" command="load"/>
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="joint1_position_controller joint2_position_controller joint3_position_controller joint4_position_controller joint5_position_controller joint6_position_controller joint_state_controller"/>
 
   <!-- start this controller -->
   <!--<rosparam file="$(find ur5_gazebo)/controller/arm_controller_ur5.yaml" command="load"/>
