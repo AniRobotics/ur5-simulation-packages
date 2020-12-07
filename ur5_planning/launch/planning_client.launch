@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <arg name="init_ang" value="-0.03,-0.95,0.79,-1.46,-1.58,-0.03"/>
+    <arg name="final_ang"  value="1.35,-0.95,0.79,-1.46,-1.58,-0.03"/>
+    <node name="motion_planning_client" pkg="ur5_planning" type="motion_planning_client.py" respawn="false" output="screen" args="$(arg init_ang) $(arg final_ang)"/>
+</launch>
